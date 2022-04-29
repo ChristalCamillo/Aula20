@@ -7,7 +7,7 @@ open class Conta(
     private  var saldo: Int = 0,
     private var nomeProprietario: String = ""
 ) {
-    fun cadastrarConta(){
+    protected fun cadastrarConta(){
         println("Informe o tipo da conta: Salário, Corrente ou Poupança: ")
         this.tipoDaconta = readLine().toString()
         println("Informe o seu saldo: ")
@@ -16,7 +16,7 @@ open class Conta(
         this.nomeProprietario = readLine().toString()
     }
 
-    fun exibirInformacoesConta() {
+   protected fun exibirInformacoesConta() {
         println(" Sua conta é do tipo $tipoDaconta, seu saldo é de R$$saldo e é propriedade de $nomeProprietario")
     }
 }
